@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Online link is used instead of the local file -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Exercise 1</title>
+    <style>
+        img {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <br>
+
+    <center>
+
+    <div id="exercise">
+        <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+         <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+         <!-- 2) Output your age, multiplied by 3 -->
+         <p>Age*3 = {{ age_three() }}</p>
+         <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+         <p>{{ rand_no() }}</p>
+         <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+         <div>
+             <img style="width:400px;height:300px" v-bind:src = "img_link">
+         </div>
+         <br>
+         <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+         <div>
+             <input type="text" v-bind:value="name">
+         </div>
+     </div>
+
+    </center>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
