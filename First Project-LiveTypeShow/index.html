@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>First VueJS : Typetext</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>
+
+</head>
+
+<body>
+
+
+	<center><img src="vue.png" alt="Vue"></center>
+	<br>
+	
+	<center>
+	<div id="app">
+		<input type="text" v-on:input="changeGreeting" class="ip" placeholder="Type Here..."></input>
+		<p>{{ greetings }}</p>
+	</div>
+	</center>
+	<script src="script.js"></script>
+</body>
+</html>

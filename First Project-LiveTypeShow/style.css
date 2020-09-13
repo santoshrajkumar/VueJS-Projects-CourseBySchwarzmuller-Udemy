@@ -1,0 +1,10 @@
+.ip {
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+p {
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
