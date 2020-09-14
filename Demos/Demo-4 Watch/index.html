@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Property</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">SecondCounter++</button>
+        <p> Counter:  {{ counter }} | {{ secondCounter }}</p>
+        <p> Result: {{ result() }}  |  {{ output }}</p>
+        
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
