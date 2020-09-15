@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styling without CSS Classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Rendering lists -->
+        <p>Phones I have used so far:</p>
+        <ul>
+            <li v-for="myPhone in myPhones"> {{ myPhone }}</li>
+        </ul>
+
+          <!-- Rendering list with index -->
+        <p> Phones I have used so far with indexes:</p>
+        <ul>
+            <li v-for="(myPhone, index) in myPhones"> ({{ index }}) {{ myPhone }} </li>
+        </ul>
+
+
+        <!-- Rendering Array in a template -->
+        <template v-for="(myPhone, index) in myPhones">
+            <center>
+            <h5>{{myPhone}}</h5> <p>{{ index }}</p>
+            </center>
+        </template>
+          
+        <hr>
+        
+        <!-- Looping through objects -->
+
+        <ul>
+            <li v-for="person in persons">
+              <div v-for="(value, key, index) in person">({{ index }}){{ key }} : {{ value }}</div>
+            </li>
+        </ul>
+
+        <!-- Generating list of numbers with v-for -->
+        <span v-for="i in 10">{{ i }} ></span>
+
+        <hr>
+
+        <!-- Pushing elements in array -->
+        <button @click="myPhones.push('iPhone 12')">Add</button>
+        <br>
+        <button @click="myPhones.pop('iPhone 12')">Pop</button>
+        
+        
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
