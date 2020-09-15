@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styling without CSS Classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <div id="app">
+          <div class="demo" :style="{'background-color': color}">{{ color }}</div> 
+          <div class="demo" :style="styleEl">{{ color }}</div>
+          <div class="demo" :style="[styleEl, {height: width + 'px'}]">{{ color }}</div>
+          <hr>
+          <input type="text" v-model="color" placeholder="Enter color name">
+          <hr>
+          <input type="text" v-model="width" placeholder="Enter width">
+        </div>
+    </center>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
