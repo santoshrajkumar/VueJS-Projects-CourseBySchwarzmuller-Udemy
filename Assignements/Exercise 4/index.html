@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="exercise">
+    <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
+    <div>
+      <button @click="startEffect">Start Effect</button>
+      <div id="effect" v-bind:class="effectClass"></div>
+    </div>
+    <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
+    <div :class="[float, 'blue', 'text-color']">I got no class :(</div>
+    <!-- 3) Let the user enter a class (create some example classes) and attach it -->
+    <div>
+      <input type="text" v-model="userClass" placeholder="User i/p class options: highlight or shrink">
+      <div :class="[{visible:isVisible}, userClass]"></div>
+    </div>
+    <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
+    <div>
+      <input type="text" v-model="userClass">
+      <input type="text" v-model="isVisible" placeholder="true / false">
+      <div :class="[{visible:isVisible}, userClass]"></div>
+    </div>
+    <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
+    <div>
+      <input type="text" v-model="myStyle.backgroundColor">
+      <div :style="myStyle"></div>
+    </div>
+    <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
+    <div>
+      <button @click="startBar">Start Progress</button>
+      <hr>
+      <div class="progress-bar" :style="progressBar">{{ value }} %</div>
+    </div></div>
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
