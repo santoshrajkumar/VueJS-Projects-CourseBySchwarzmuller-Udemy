@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styling without CSS Classes</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <center>
+        <div id="app">
+            <p v-if="show">Show is true</p>
+            <p v-else>Show is false</p>
+             
+            <template v-if="show">
+              <p>Template In !</p>
+              <p> Hi from template</p>
+            </template>
+            <button @click="show = !show">Change Show</button>
+        </div>
+    </center>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
