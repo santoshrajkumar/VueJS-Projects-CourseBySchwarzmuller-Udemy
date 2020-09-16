@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Slayer</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+    <section class="row">
+        <div class="small-6 columns">
+            <h1 class="text-center">: {{ playerName }}</h1>
+            <div class="healthbar">
+                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
+                :style="{ width: playerHealth + '%' }">
+                    {{ playerHealth }}
+                </div>
+            </div>
+        </div>
+        <div class="small-6 columns">
+            <h1 class="text-center">MONSTER</h1>
+            <div class="healthbar">
+                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
+                :style="{ width: monsterHealth + '%' }">
+                {{ monsterHealth }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row controls" v-if="!gameRunning">
+        <div class="small-12 columns">
+            <button id="start-game" v-on:click="startNewGame">START NEW GAME</button>
+        </div>
+    </section>
+    <section class="row controls" v-if="gameRunning">
+        <div class="small-12 columns">
+            <button id="attack" v-on:click="playerAttack">ATTACK</button>
+            <button id="special-attack" v-on:click="specialAttack">SPECIAL ATTACK</button>
+            <button id="heal" v-on:click="healAll">HEAL</button>
+            <button id="give-up" v-on:click="gameRunning = false">GIVE UP</button>
+            <p>{{ specialAttackEnd }}</p>
+        </div>
+    </section>
+
+    <section class="row controls" v-if="!gameRunning">
+        <input type="text" style="width: 350px;" placeholder="Enter your name" v-model="playerName">
+    </section>
+
+    <section class="row log">
+        <div class="small-12 columns">
+            <ul>
+                <li v-for="gamestat in gamestats" :class="{'player-turn' : gamestat.isPlayer, 'monster-turn' : !gamestat.isPlayer}">
+                    {{ gamestat.text }}
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
