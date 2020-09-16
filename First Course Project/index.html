@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Monster Slayer</title>
+
+    <meta charset="UTF-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<meta name="description" content="Simple single page game with Vue.js namely Monster Slayer">
+	
+	<meta name="keywords" content="Vue.js, VueJS, vue.js, JavaScript, Single Page Web Page with Vue.js, Best Vue.js Github repository for beginner">
+    
+    <title>Monster Slayer | Simple Game with vue.js</title>
+
+    <!-- Open Graph-->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Singel page web based game with Vue.js" />
+    <meta property="og:description" content="Simple game with vue.js" />
+    <meta property="og:url" content="https://santoshrajkumar.github.io/" />
+    <meta property="og:site_name" content="monster slayer simple game with Vue.js" />
+    <meta property="article:publisher" content="https://santoshrajkumar.github.io/" />
+    <meta property="og:image" content="sample.png"/>
+
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="app">
     <center>
-        <img src="vue.png" alt="Vue" style="width: 200px; margin: 20px;">
+        <img src="vue.png" alt="Vue" style="width: 50px; margin: 5px;">
+        <p>Powered by Vue.JS</p>
+        <h1><a href="https://github.com/santoshrajkumar/VueJS-Projects-CourseBySchwarzmuller-Udemy/tree/master/First%20Course%20Project" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a> <-- Repo</h1>
     </center>
 
     
     <section class="row">
         <div class="small-6 columns">
-            <h1 class="text-center">: {{ playerName }}</h1>
+            <h1 class="text-center"> . {{ playerName }}</h1>
             <div class="healthbar">
                 <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
                 :style="{ width: playerHealth + '%' }">
@@ -49,7 +70,7 @@
     </section>
 
     <section class="row controls" v-if="!gameRunning">
-        <input type="text" style="width: 350px;" placeholder="Enter your name" v-model="playerName">
+        <input type="text" style="width: 350px;" placeholder="Enter your name (Player Name)" v-model="playerName">
     </section>
 
     <section class="row log">

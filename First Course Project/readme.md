@@ -11,3 +11,5 @@
 - Limited Special Attack (3 No.s)
 - Name of the player can be entered (with v-model)
 - Healing of both the monster & the player (albeit the player will be healed a bit more than the moster)
+
+> Live deployed version-  [<b>https://monsterslayer-vuejs.web.app/</b>](https://monsterslayer-vuejs.web.app/)
