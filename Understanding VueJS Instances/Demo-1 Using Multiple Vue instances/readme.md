@@ -1,0 +1,1 @@
+## Two vue instances has been used for two <div>s in this example
