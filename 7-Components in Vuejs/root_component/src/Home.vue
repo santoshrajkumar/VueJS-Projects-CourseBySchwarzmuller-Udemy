@@ -12,7 +12,7 @@
 export default {
     data: function(){
         return {
-            name: 'Sntosh'
+            name: 'Santosh'
         }
     },
     methods: {
